@@ -1,0 +1,57 @@
+subprojects {
+    version = '1.0'
+    
+    useSpringVersion = '3.0.5.RELEASE'
+    useDcm4cheVersion = '2.0.24'
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    
+    sourceCompatibility = 1.6
+
+    repositories {
+        mavenCentral()
+        maven {
+            url "http://www.dcm4che.org/maven2"
+        }
+        maven {
+            url "http://jogamp.org/deployment/maven"
+        }
+        maven {
+            url "http://qtjambi.sourceforge.net/maven2"
+        }
+        maven {
+            url "http://maven.springframework.org/release"
+        }
+        flatDir {
+            dirs '../lib/jogl'
+            dirs '../lib/vtk'
+        }
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.11'
+    }
+
+    sourceSets {
+        // put currently failing unit tests into src/test_failed/java
+        test_failed
+    }
+
+    
+    // jar tests
+
+    task testJar(type: Jar, dependsOn: testClasses) {
+        baseName = "test-${project.archivesBaseName}"
+        from sourceSets.test.output
+    }
+
+    configurations {
+        tests
+    }
+
+    artifacts {
+        tests testJar
+    }
+
+}
