@@ -10,7 +10,6 @@ subprojects {
     sourceCompatibility = 1.6
 
     repositories {
-        mavenCentral()
         maven {
             url "http://www.dcm4che.org/maven2"
         }
@@ -20,6 +19,7 @@ subprojects {
         maven {
             url "http://maven.springframework.org/release"
         }
+        mavenCentral()
     }
 
     dependencies {
