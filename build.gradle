@@ -14,7 +14,7 @@ subprojects {
             url "http://www.dcm4che.org/maven2"
         }
         maven {
-            url "http://qtjambi.sourceforge.net/maven2"
+            url "https://swt-repo.googlecode.com/svn/repo"
         }
         maven {
             url "http://maven.springframework.org/release"
