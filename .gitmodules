@@ -1,15 +1,15 @@
 [submodule "iirkit"]
 	path = iirkit
-	url =  ssh://git@git.sofd.eu/var/lib/git/repos/iirkit.git
+	url =  https://github.com/Sofd/iirkit.git
 [submodule "sofd_draw2d"]
 	path = sofd_draw2d
-	url = ssh://git@git.sofd.eu/var/lib/git/repos/sofd_draw2d.git
+	url = https://github.com/Sofd/sofd_draw2d.git
 [submodule "sofd_swing"]
 	path = sofd_swing
-	url = ssh://git@git.sofd.eu/var/lib/git/repos/sofd_swing.git
+	url = https://github.com/Sofd/sofd_swing.git
 [submodule "sofd_util"]
 	path = sofd_util
-	url = ssh://git@git.sofd.eu/var/lib/git/repos/sofd_util.git
+	url = https://github.com/Sofd/sofd_util.git
 [submodule "viskit"]
 	path = viskit
-	url = ssh://git@git.sofd.eu/var/lib/git/repos/viskit.git
+	url = https://github.com/Sofd/viskit.git
