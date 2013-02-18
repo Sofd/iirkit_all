@@ -28,7 +28,7 @@ Since this is a git repository containing multiple submodules,
 checking out the whole source code for iirkit comprises three steps:
 
     # clone the superproject
-    git clone ssh://git@git.sofd.eu/var/lib/git/repos/iirkit_all.git
+    git clone https://github.com/Sofd/iirkit_all.git
     cd iirkit_all/
     # initialize the submodules
     git submodule init
@@ -60,9 +60,9 @@ For creating a zip distribution for the running platform, issue
 
     gradle distZip
 
-in the `iirkit` project. For running iirkit directory from the project
-directory, `gradle run` can be used. `gradle tasks` shows which tasks
-are available.
+in the `iirkit` project. For running iirkit directly from the project
+directory, use `gradle run`. `gradle tasks` shows which tasks are
+available.
 
 
 [iirkit_all]: https://github.com/Sofd/iirkit_all
