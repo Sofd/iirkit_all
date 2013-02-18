@@ -10,19 +10,17 @@ series of (2D) medical images by independent experts.
 ![iirkit sample setup](http://www.sofd.de/wp-content/uploads/GI-Arbeitsplatz_edited-mittel.jpg)
 
 For more information in iirkit and for downloading pre-compiled
-binaries of iirkit, go to <http://www.sofd.de/iirkit/>.
-
-These git repositories contain the full source code to iirkit.
+binaries, go to <http://www.sofd.de/iirkit/>.
 
 Building iirkit
 ---------------
 
 The `iirkit` source code is organized in a root git repository,
-[iirkit_all][], which contains the source code for all the components
-of iirkit as [git submodules][].
+[iirkit_all][], which embeds the source code for all the components of
+iirkit as [git submodules][].
 
-The build itself is a [Gradle][] multi-project build, where each git
-submodule contains one subproject.
+The build itself is a [Gradle][] multi-project build, with each git
+submodule containing one subproject.
 
 So [Gradle][] is required for building iirkit.
 
@@ -45,6 +43,11 @@ After that, you can build the whole thing using:
 `iirkit` is the subproject that builds the toplevel iirkit executable
 program; it references all the dependent projects via Gradle project
 dependencies.
+
+For importing all projects in Eclipse, issue `gradle eclipse` once in
+the root `iirkit_all`. After that, all the subdirectories should be
+Eclipse projects that can be imported together into Eclipse without
+errors.
 
 iirkit uses the [SWT][] UI toolkit for displaying HTML-based eCRFs
 (electronic case report forms). SWT contains platform-dependent
